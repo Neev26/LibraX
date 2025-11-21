@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  
+  <title>Profile • Bookstore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="appInit('profile')">
+
+   <header class="topbar">
+    <div class="left">
+      <div class="logo">
+        <img src="logo.png" alt="Logo" style="height:50px;">
+        </div>
+        <div class="brand">LibraX</div>
+    </div>
+
+    <nav class="nav">
+      <a href="index.html" class="navlink">Home</a>
+      <a href="library.html" class="navlink">Your Library</a>
+      <a href="profile.html" class="navlink">Profile</a>
+      <a href="#" id="logoutTop3">Logout</a>
+    </nav>
+    <div class="right"><button id="themeBtn3" class="icon-btn">🌓</button></div>
+  </header>
+
+  <main class="container">
+    <h1>Profile</h1>
+    <div class="profile-card">
+      <div class="avatar" id="profileAvatar">G</div>
+      <div>
+        <div id="profileUser">Guest</div>
+        <div class="muted" id="profileEmail">-</div>
+        <div class="muted">Saved books: <span id="profileCount">0</span></div>
+        <div style="margin-top:10px" class="row">
+          <button id="editProfileBtn" class="btn primary">Edit</button>
+          <button id="logoutBtnProfile" class="btn ghost">Logout</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="editProfileForm" class="hidden" style="margin-top:12px">
+      <input id="editName" placeholder="New username">
+      <input id="editEmail" placeholder="New email">
+      <div style="margin-top:8px"><button id="saveProfileBtn" class="btn primary">Save</button></div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
