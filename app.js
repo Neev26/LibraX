@@ -9,7 +9,7 @@ const PLACEHOLDER = 'https://placehold.co/300x450?text=No+Cover';
 const BOOKS = [
   {id:'hp1', title:"Harry Potter and the Sorcerer's Stone", author:"J.K. Rowling", category:"Novels", cover:"https://m.media-amazon.com/images/I/517CL0lWQ-L._SY445_SX342_FMwebp_.jpg", pdf:"https://hazidesaratcollege.ac.in/library/uploads/85jkr_harrypotter_1.pdf"},
   {id:'hp2', title:"Harry Potter and the Chamber of Secrets", author:"J.K. Rowling", category:"Novels", cover:"https://covers.openlibrary.org/b/isbn/0439064872-L.jpg", pdf:"https://hazidesaratcollege.ac.in/library/uploads/4jkr_harrypotter_2.pdf"},
-  {id:'hp3', title:"Harry Potter and the Prisoner of Azkaban", author:"J.K. Rowling", category:"Novels", cover:"https://covers.openlibrary.org/b/isbn/0439136369-L.jpg", pdf:"https://hp.subhamram.in/J.K.%20Rowling%20-%20HP%203%20-%20Harry%20Potter%20and%20the%20Prisoner%20of%20Azkaban.pdf"},
+  {id:'hp3', title:"Harry Potter and the Prisoner of Azkaban", author:"J.K. Rowling", category:"Novels", cover:"https://covers.openlibrary.org/b/isbn/0439136369-L.jpg", pdf:"https://archive.org/download/FantasyFictionebookcollection/Harry%20Potter/3%20-%20Harry%20Potter%20and%20the%20Prisoner%20of%20Azkaban.pdf"},
   {id:'hp4', title:"Harry Potter and the Goblet of Fire", author:"J.K. Rowling", category:"Novels", cover:"https://covers.openlibrary.org/b/isbn/0439139600-L.jpg", pdf:"https://vidyaprabodhinicollege.edu.in/VPCCECM/ebooks/ENGLISH%20LITERATURE/Harry%20potter/(Book%204)%20Harry%20Potter%20And%20The%20Goblet%20Of%20Fire_001.pdf"},
   {id:'hp5', title:"Harry Potter and the Order of the Phoenix", author:"J.K. Rowling", category:"Novels", cover:"https://covers.openlibrary.org/b/isbn/0439358078-L.jpg", pdf:"https://afgjilibrary.wordpress.com/wp-content/uploads/2020/05/hp5-harry-potter-and-the-order-of-the-phoenix.pdf"},
   {id:'hp6', title:"Harry Potter and the Half-Blood Prince", author:"J.K. Rowling", category:"Novels", cover:"https://covers.openlibrary.org/b/isbn/0439785960-L.jpg", pdf:"https://hazidesaratcollege.ac.in/library/uploads/43jkr_harrypotter_6.pdf"},
@@ -320,6 +320,7 @@ function escapeHtml(s) { if(!s) return ''; return String(s).replace(/&/g,'&amp;'
   if(!localStorage.getItem(THEME_KEY)) localStorage.setItem(THEME_KEY, 'dark');
   applyTheme();
 })();
+
 
 
 
