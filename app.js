@@ -20,7 +20,7 @@ const BOOKS = [
   {id:'pride', title:"Pride and Prejudice", author:"Jane Austen", category:"Novels", cover:"https://covers.openlibrary.org/b/isbn/0141439513-L.jpg", pdf:"https://archive.org/download/prideprejudice00aust/prideprejudice00aust.pdf"},
   {id:'gatsby', title:"The Great Gatsby", author:"F. Scott Fitzgerald", category:"Classics", cover:"https://covers.openlibrary.org/b/isbn/0743273567-L.jpg", pdf:"https://www.planetebook.com/free-ebooks/the-great-gatsby.pdf"},
   {id:'mockingbird', title:"To Kill a Mockingbird", author:"Harper Lee", category:"Classics", cover:"https://covers.openlibrary.org/b/id/12606523-L.jpg", pdf:"https://www.raio.org/TKMFullText.pdf"},
-  {id:'moby', title:"Moby Dick", author:"Herman Melville", category:"Classics", cover:"https://covers.openlibrary.org/b/id/10720365-L.jpg", pdf:"https://uberty.org/wp-content/uploads/2015/12/herman-melville-moby-dick.pdf"},
+  {id:'moby', title:"Moby Dick", author:"Herman Melville", category:"Classics", cover:"https://covers.openlibrary.org/b/id/10720365-L.jpg", pdf:"https://archive.org/download/mobydickorwhale01melvuoft/mobydickorwhale01melvuoft.pdf"},
   {id:'warpeace', title:"War and Peace", author:"Leo Tolstoy", category:"Classics", cover:"https://covers.openlibrary.org/b/id/6695695-L.jpg", pdf:"https://archive.org/download/war-peace/war-peace.pdf"},
 
   {id:'sherlock', title:"Sherlock Holmes: Complete", author:"Arthur Conan Doyle", category:"Mystery", cover:"https://covers.openlibrary.org/b/id/12501284-L.jpg", pdf:"https://archive.org/download/ost-english-sherlockholmescomplete/SherlockHolmesComplete.pdf"},
@@ -320,6 +320,7 @@ function escapeHtml(s) { if(!s) return ''; return String(s).replace(/&/g,'&amp;'
   if(!localStorage.getItem(THEME_KEY)) localStorage.setItem(THEME_KEY, 'dark');
   applyTheme();
 })();
+
 
 
 
