@@ -17,7 +17,7 @@ const BOOKS = [
 
   {id:'alchemist', title:"The Alchemist", author:"Paulo Coelho", category:"Novels", cover:"https://covers.openlibrary.org/b/isbn/0061122416-L.jpg", pdf:"https://archive.org/download/OceanofPDF.comTheAlchemist/_OceanofPDF.com_The_Alchemist.pdf"},
   {id:'fault', title:"The Fault in Our Stars", author:"John Green", category:"Novels", cover:"https://covers.openlibrary.org/b/id/7305682-L.jpg", pdf:"https://spensabayalibrary.wordpress.com/wp-content/uploads/2016/04/the-fault-in-our-stars.pdf"},
-  {id:'pride', title:"Pride and Prejudice", author:"Jane Austen", category:"Novels", cover:"https://covers.openlibrary.org/b/isbn/0141439513-L.jpg", pdf:"http://giove.isti.cnr.it/demo/eread/Libri/joy/Pride.pdf"},
+  {id:'pride', title:"Pride and Prejudice", author:"Jane Austen", category:"Novels", cover:"https://covers.openlibrary.org/b/isbn/0141439513-L.jpg", pdf:"https://archive.org/download/prideprejudice00aust/prideprejudice00aust.pdf"},
   {id:'gatsby', title:"The Great Gatsby", author:"F. Scott Fitzgerald", category:"Classics", cover:"https://covers.openlibrary.org/b/isbn/0743273567-L.jpg", pdf:"https://www.planetebook.com/free-ebooks/the-great-gatsby.pdf"},
   {id:'mockingbird', title:"To Kill a Mockingbird", author:"Harper Lee", category:"Classics", cover:"https://covers.openlibrary.org/b/id/12606523-L.jpg", pdf:"https://www.raio.org/TKMFullText.pdf"},
   {id:'moby', title:"Moby Dick", author:"Herman Melville", category:"Classics", cover:"https://covers.openlibrary.org/b/id/10720365-L.jpg", pdf:"https://uberty.org/wp-content/uploads/2015/12/herman-melville-moby-dick.pdf"},
@@ -320,6 +320,7 @@ function escapeHtml(s) { if(!s) return ''; return String(s).replace(/&/g,'&amp;'
   if(!localStorage.getItem(THEME_KEY)) localStorage.setItem(THEME_KEY, 'dark');
   applyTheme();
 })();
+
 
 
 
