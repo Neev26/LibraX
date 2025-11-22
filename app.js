@@ -136,6 +136,8 @@ if(!loadUsers().some(u => u.username === 'demo')) {
   saveUsers(users);
 }
 
+function applyTheme(){ const t = localStorage.getItem(THEME_KEY) || 'light'; if(t === 'dark') document.documentElement.classList.add('dark'); else document.documentElement.classList.remove('dark'); }
+function toggleTheme(){ const t = localStorage.getItem(THEME_KEY) || 'light'; localStorage.setItem(THEME_KEY, t === 'light' ? 'dark' : 'light'); applyTheme(); }
 
 
 
@@ -318,6 +320,7 @@ function escapeHtml(s) { if(!s) return ''; return String(s).replace(/&/g,'&amp;'
   if(!localStorage.getItem(THEME_KEY)) localStorage.setItem(THEME_KEY, 'dark');
   applyTheme();
 })();
+
 
 
 
