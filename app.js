@@ -137,8 +137,6 @@ if(!loadUsers().some(u => u.username === 'demo')) {
 }
 
 
-function applyTheme(){ const t = localStorage.getItem(THEME_KEY) || 'light'; if(t === 'dark') document.documentElement.classList.add('dark'); else document.documentElement.classList.remove('dark'); }
-function toggleTheme(){ const t = localStorage.getItem(THEME_KEY) || 'light'; localStorage.setItem(THEME_KEY, t === 'light' ? 'dark' : 'light'); applyTheme(); }
 
 
 const $ = s => document.querySelector(s);
@@ -153,7 +151,7 @@ function appInit(page) {
   if(splash) setTimeout(()=>splash.style.display='none',700);
 
 
-  ['#themeBtn', '#themeBtn2', '#themeBtn3'].forEach(id => { const el = $(id); if(el) el.onclick = toggleTheme; });
+ 
 
   ['#logoutTop', '#logoutTop2', '#logoutTop3'].forEach(id => { const el = $(id); if(el) el.onclick = e => { e.preventDefault(); logout(); }});
 
@@ -320,6 +318,7 @@ function escapeHtml(s) { if(!s) return ''; return String(s).replace(/&/g,'&amp;'
   if(!localStorage.getItem(THEME_KEY)) localStorage.setItem(THEME_KEY, 'dark');
   applyTheme();
 })();
+
 
 
 
