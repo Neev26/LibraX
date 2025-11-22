@@ -1,40 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Your Library • E-Library</title>
+  
+  <title>Your Library • Bookstore</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body onload="appInit('library')">
 
-  <!-- NAVIGATION BAR (SAME ON ALL PAGES) -->
-  <header class="topbar">
-      <div class="left">
-          <div class="logo">Bookstore</div>
-          <div class="brand-sub">Premium E-Library</div>
-      </div>
+   <header class="topbar">
+    <div class="left">
+      <div class="logo">
+        <img src="logo.png" alt="Logo" style="height:50px;">
+        </div>
+        <div class="brand">LibraX</div>
+    </div>
 
-      <nav class="nav">
-          <a href="index.html" class="navlink">Home</a>
-          <a href="library.html" class="navlink active">Your Library</a>
-          <a href="profile.html" class="navlink">Profile</a>
-          <a href="#" id="logoutTop">Logout</a>
-      </nav>
-
-      <div class="right">
-          <button id="menuBtn" class="icon-btn mobile-only">☰</button>
-      </div>
+    <nav class="nav">
+      <a href="index.html" class="navlink">Home</a>
+      <a href="library.html" class="navlink">Your Library</a>
+      <a href="profile.html" class="navlink">Profile</a>
+      <a href="#" id="logoutTop2">Logout</a>
+    </nav>
+   
   </header>
 
-  <!-- PAGE CONTENT -->
-  <section class="container">
+  <main class="container">
     <h1>Your Library</h1>
-    <p class="muted">Books you have saved appear here.</p>
+    <p id="libNote" class="muted">Saved books are per account.</p>
+    <div class="controls-row" style="margin-top:12px">
+      <select id="libSort" class="select">
+        <option value="">Sort</option>
+        <option value="title">Title</option>
+        <option value="author">Author</option>
+      </select>
+      <button id="clearLibBtn" class="btn ghost">Clear Library</button>
+    </div>
 
-    <div id="libraryGrid" class="grid"></div>
-  </section>
+    <div id="libGrid" class="grid" style="margin-top:12px"></div>
+  </main>
 
   <script src="app.js"></script>
 </body>
