@@ -242,13 +242,36 @@ function authInit() {
   $('#signupBtn') && ($('#signupBtn').onclick = signup);
 }
 function signup() {
-  const u = $('#signupUser').value.trim(), e = $('#signupEmail').value.trim(), p = $('#signupPass').value;
-  if(!u || !p) { $('#signupErr') && ($('#signupErr').innerText = 'Username & password required'); return; }
+  const u = $('#signupUser').value.trim();   
+  const e = $('#signupEmail').value.trim(); 
+  const p = $('#signupPass').value;          
+  const errBox = $('#signupErr');
+  if (errBox) errBox.innerText = "";
+  if (!e) {
+    errBox.innerText = "Email is required.";
+    return;
+  }
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(e)) {
+    errBox.innerText = "Enter a valid email address.";
+    return;
+  }
+  if (!p) {
+    errBox.innerText = "Password is required.";
+    return;
+  }
+  if (p.length < 6) {
+    errBox.innerText = "Password must be at least 6 characters.";
+    return;
+  }
   const users = loadUsers();
-  if(users.find(x => x.username === u || (e && x.email === e))) { $('#signupErr') && ($('#signupErr').innerText = 'Username or email exists'); return; }
-  users.push({username: u, email: e, password: p, books: []});
-  saveUsers(users); setCurrent({username: u, email: e, isGuest: false}); location.href = 'index.html';
+  const finalUsername = u || `User${Math.floor(Math.random() * 10000)}`;
+  users.push({ username: finalUsername, email: e, password: p, books: [] });
+  saveUsers(users);
+  setCurrent({ username: finalUsername, email: e, isGuest: false });
+  location.href = 'index.html';
 }
+
 function login() {
   const u = $('#loginUser').value.trim(), p = $('#loginPass').value;
   const users = loadUsers(); const user = users.find(x => x.username === u && x.password === p);
@@ -320,6 +343,7 @@ function escapeHtml(s) { if(!s) return ''; return String(s).replace(/&/g,'&amp;'
   if(!localStorage.getItem(THEME_KEY)) localStorage.setItem(THEME_KEY, 'dark');
   applyTheme();
 })();
+
 
 
 
