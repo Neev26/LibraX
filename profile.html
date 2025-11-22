@@ -1,48 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Profile • E-Library</title>
+  
+  <title>Profile • Bookstore</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body onload="appInit('profile')">
 
-  <!-- NAVIGATION BAR (SAME ON ALL PAGES) -->
-  <header class="topbar">
-      <div class="left">
-          <div class="logo">Bookstore</div>
-          <div class="brand-sub">Premium E-Library</div>
-      </div>
+   <header class="topbar">
+    <div class="left">
+      <div class="logo">
+        <img src="logo.png" alt="Logo" style="height:50px;">
+        </div>
+        <div class="brand">LibraX</div>
+    </div>
 
-      <nav class="nav">
-          <a href="index.html" class="navlink">Home</a>
-          <a href="library.html" class="navlink">Your Library</a>
-          <a href="profile.html" class="navlink active">Profile</a>
-          <a href="#" id="logoutTop">Logout</a>
-      </nav>
-
-      <div class="right">
-          <button id="menuBtn" class="icon-btn mobile-only">☰</button>
-      </div>
+    <nav class="nav">
+      <a href="index.html" class="navlink">Home</a>
+      <a href="library.html" class="navlink">Your Library</a>
+      <a href="profile.html" class="navlink">Profile</a>
+      <a href="#" id="logoutTop3">Logout</a>
+    </nav>
+    
   </header>
 
-  <!-- PAGE CONTENT -->
-  <section class="container">
-      <h1>My Profile</h1>
-
-      <div class="profile-card">
-          <p><b>Username:</b> <span id="profileName"></span></p>
-          <p><b>Email:</b> <span id="profileEmail"></span></p>
-          <p><b>Books Saved:</b> <span id="savedCount"></span></p>
-
-          <h3>Edit Profile</h3>
-          <input id="editName" class="input" placeholder="Enter new name">
-          <input id="editEmail" class="input" placeholder="Enter new email">
-          <button class="btn primary" onclick="updateProfile()">Save Changes</button>
+  <main class="container">
+    <h1>Profile</h1>
+    <div class="profile-card">
+      <div class="avatar" id="profileAvatar">G</div>
+      <div>
+        <div id="profileUser">Guest</div>
+        <div class="muted" id="profileEmail">-</div>
+        <div class="muted">Saved books: <span id="profileCount">0</span></div>
+        <div style="margin-top:10px" class="row">
+          <button id="editProfileBtn" class="btn primary">Edit</button>
+          <button id="logoutBtnProfile" class="btn ghost">Logout</button>
+        </div>
       </div>
-  </section>
+    </div>
+
+    <div id="editProfileForm" class="hidden" style="margin-top:12px">
+      <input id="editName" placeholder="New username">
+      <input id="editEmail" placeholder="New email">
+      <div style="margin-top:8px"><button id="saveProfileBtn" class="btn primary">Save</button></div>
+    </div>
+  </main>
 
   <script src="app.js"></script>
 </body>
