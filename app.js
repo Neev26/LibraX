@@ -68,7 +68,8 @@ const BOOKS = [
   {id:'1984', title:"1984", author:"George Orwell", category:"Dystopia", cover:"https://covers.openlibrary.org/b/isbn/0451524934-L.jpg", pdf:"https://dn790002.ca.archive.org/0/items/NineteenEightyFour-Novel-GeorgeOrwell/orwell1984.pdf"},
   {id:'brave', title:"Brave New World", author:"Aldous Huxley", category:"Dystopia", cover:"https://covers.openlibrary.org/b/id/12645086-L.jpg", pdf:"https://archive.org/download/BraveNewWorld-and-BraveNewWorldRevisited/Brave-New-World_-_Aldous-Huxley.pdf"},
   {id:'fahrenheit', title:"Fahrenheit 451", author:"Ray Bradbury", category:"Dystopia", cover:"https://covers.openlibrary.org/b/id/8461232-L.jpg", pdf:"https://lexiconic.net/english/F451.pdf"},
-
+  {id:'Fallinginlove', title:"Falling in love again", author:"Ruskin Bond", category:"Romance", cover:"https://covers.openlibrary.org/b/id/13161376-L.jpg", pdf:""},
+  
   {id:'catch22', title:"Catch-22", author:"Joseph Heller", category:"Classics", cover:"https://tommygirard.wordpress.com/wp-content/uploads/2023/12/catch-22-by-joseph-heller-book-cover.jpg", pdf:""},
   {id:'beloved', title:"Beloved", author:"Toni Morrison", category:"Classics", cover:PLACEHOLDER, pdf:""},
   {id:'ontheroad', title:"On the Road", author:"Jack Kerouac", category:"Classics", cover:PLACEHOLDER, pdf:""},
@@ -343,6 +344,7 @@ function escapeHtml(s) { if(!s) return ''; return String(s).replace(/&/g,'&amp;'
   if(!localStorage.getItem(THEME_KEY)) localStorage.setItem(THEME_KEY, 'dark');
   applyTheme();
 })();
+
 
 
 
